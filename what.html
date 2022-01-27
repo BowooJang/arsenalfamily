@@ -1,38 +1,180 @@
 <!doctype html>
 
+<!-- 여기가 메인으로 바꿀곳.
+1/26 15시에 마지막 업뎃.
+
+-->
+
+<!--
+깃허브에 새로운파일로 덮어씌우기 되는 코드
+
+
+
+
+
+-->
 
 <html>
   <head>
     <title> what's this? </title>
     <meta charset="utf-8">
     <style>
+
+      h1,h2,ul{
+        padding-left: 20px;
+      }
       a{
         text-decoration: none;
+        color: inherit;
+        font:30px;
       }
+      /* 링크 누르기전,누른 후 링크색깔 */
+      /*
+      a:link{
+        color:black
+      }
+      a:visited{
+        color:black
+      }
+      */
+
+      /* 제목폰트         */
+
+      /* 그림         */
       h1{
-        font-size:50px;
-        text-align:center;
+        margin:0;
+        padding-left: 60px;
       }
+      /* 아스날패밀리         */
+      h2{
+        margin: 0;
+        margin-bottom: 10px;
+        padding:1px;
+        font-family: 'jaemok';
+        font-size: 30px;
+        font-weight:normal;
+        padding-left: 70px;
+
+      }
+      /* 메뉴, 폰트둥,
+      +그리드로 묶어주기,.
+      나중에 컨텐츠 더 생기면 ul이 다른곳에
+      또 생길수도 있으므로 정리해두기         */
+      #grid ul{
+        list-style: none;
+        padding-left:1px;
+        font-family: 'naeyong';
+        padding-left: 70px;
+      }
+      /* 왓투두         */
+      h3{
+          font-weight:100;
+          font-size:30px;
+          padding-left: 28px;
+          font-family: 'jaemok';
+          margin-top:10px;
+          margin-bottom: 0px;
+      }
+
+        /* 본문 내용         */
+
+      #grid ol
+        {
+        font-family: 'naeyong';
+        margin-top: 5px;
+
+
+
+       }
+
+      #grid
+      {
+        display: grid;
+        grid-template-columns: 220px 700px;
+        font-size: 18px;
+
+      }
+      /* 제목,내용 같이 설정 */
+
+      #contents
+      {
+        padding:20px;
+        padding-left:50px;
+        padding-top: 1px;
+
+
+      }
+      #grid #what{
+        color:rgb(200,0,20);
+      }
+      /*screen width < 800px 라는 뜻
+      -> 작을때 옵션이면 max!! */
+      @media(max-width:800px){
+        h1,h2,#grid ul{padding-left:0px;
+        }
+      }
+      /*폰트주소 그냥 넣어줘야함.파일이름만. 깃허브에는!!*/
+
+      @font-face
+      {
+        font-family: 'jaemok';
+        src: url('jaemok.ttf') format('truetype');
+
+      }
+      @font-face
+      {
+        font-family: 'naeyong';
+        src: url('naeyong.ttf') format('truetype');
+      }
+
+
+
+
+
+
     </style>
   </head>
 
   <body>
-    <h1><a href="what.html"> Arsenal Family</a></h1>
-    <ol>
-      <li><a href="what.html"> what's this</a></li>
-      <li><a href="diary.html"> gunner's diary</a></li>
-      <li><a href="vlog.html"> gunner's v-log</a></li>
-      <li><a href="penpic.html"> gunner's penpic</a></li>
-      <li><a href="song.html"> Arsenal Song</a></li>
-    </ol>
-    <h2>본문</h2>
-      <ol>
+    <h1> <img src="arsenal6.png" border="0" width="120" height="90">
+    </h1>
+    <h2><a href="what.html"> Arsenal Family</a></h2>
+    <!--
+    div 부모태그(grid) 안에
+    ul 이랑 div(h3+ol)2개의 자식
 
-        <li>우리는 아스날의 평화를 지킨다.</li>
-        <li>이기는 날이든 지는 날이든 오늘은 아스날이다.</li>
-        <li>우리 세명이 각각 세명의 몫을 하여(3x3=9) 9너가 된다.</li>
-        <li>세마리의 새가 세상을 새롭게 바꾼다.</li>
-      </ol>
+    -->
+    <div id="grid">
+      <ul >
+        <div id="what">
+          <li><a href="what.html" class="what2"> what's this?</a></li><br><br>
+        </div>
+        <li><a href="diary.html"> gunner's diary</a></li><br><br>
+        <li><a href="vlog.html"> gunner's v-log</a></li><br><br>
+        <li><a href="penpic.html"> gunner's penpic</a></li><br><br>
+        <li><a href="song.html"> Arsenal Song</a></li>
+      </ul>
+
+
+     <div id="contents">
+      <h3>what to do?</h3>
+        <ol>
+          <br><br><br>
+
+          <img src="arsenal5.jpeg" border="0" width="300" height="300">
+          <img src="arsenal7.png" border="0" width="300" height="300">
+          <img src="arsenal8.jpeg" border="0" width="300" height="300">
+          <br><br><br><br><br><br>
+          <img src="chi.jpeg" border="0" width="500" height="450">
+          <br><br><br>
+
+          <li>We are keeping that peace of arsenal</li>
+          <li> winning day and losing day both today is arse nal.</li>
+          <li> 3 people x 3 human eating = 9nner </li>
+          <li> two bedoolgi is vegun, one gorani is begun   </li>
+        </ol>
+      </div>
+    </div>
   </body>
 
 </html>
