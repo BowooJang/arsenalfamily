@@ -1,62 +1,209 @@
 <!doctype html>
 
-git fetch --all
-git reset --hard origin/master
 <html>
   <head>
     <title> Arsenal Song </title>
     <meta charset="utf-8">
     <style>
+
+
+    /*왼쪽 메뉴들 전체 옵션 */
+      h1,h2,ul{
+        padding-left: 20px;
+      }
+
+
+      /* 링크태그는 다 a태그임!!
+      링크거는 메뉴나 제목들 전체에 적용하는게 a!!
+      h단독으로는 링킁태그가 아니다. */
       a{
         text-decoration: none;
+        color: inherit;
+        font:30px;
       }
+      /* 링크태그들(a) 클릭했을때 나오는 보라색 옵션 사라지는것
+      색도 안나오게하는것
+      */
+
+
+      /* 맨 위에 로고        */
+      h1{
+        margin:0;
+        padding-left: 60px;
+      }
+
+      /* 아스날패밀리(제목)         */
+      h2{
+        margin: 0;
+        margin-bottom: 10px;
+        padding:1px;
+        font-family: 'jaemok';
+        font-size: 100px;
+        font-weight:normal;
+        padding-left: 70px;
+
+      }
+
+
+      /* 메뉴 파트
+      폰트둥,+그리드로 묶어주기,.
+      나중에 컨텐츠 더 생기면 ul이 다른곳에
+      또 생길수도 있으므로 정리해두기         */
+      #grid ul{
+        list-style: none;
+        padding-left:1px;
+        font-family: 'naeyong2';
+        padding-left: 70px;
+      }
+
+
+      /*메뉴에 왓디스만 빨강나오는 효과*/
+      #grid #what{
+        color:rgb(250,0,0);
+      }
+
+
+      /* 왓투두         */
+      h3{
+          font-weight:100;
+          font-size:30px;
+          padding-left: 28px;
+          font-family: 'naeyong2';
+          margin-top:10px;
+          margin-bottom: 0px;
+      }
+
+
+        /* 본문 내용         */
+      #grid ol
+        {
+        font-family: 'naeyong2';
+        margin-top: 5px;
+       }
+
+       /* 제목,본문 내용 같이 설정 */
+
+       #contents
+       {
+         padding:20px;
+         padding-left:50px;
+         padding-top: 1px;
+       }
+
+
+
+       /* 그리드(공간 디자인) 만들기*/
+      #grid
+      {
+        display: grid;
+        grid-template-columns: 220px 700px;
+        font-size: 18px;
+      }
+
+
+      /*screen width < 800px 라는 뜻
+      -> 작을때 옵션이면 max!! */
+      @media(max-width:800px){
+        h1,h2,#grid ul{padding-left:0px;
+        }
+      }
+
+
+
+      /*외부 폰트 적용하기
+      폰트주소 그냥 넣어줘야함.파일이름만.
+      (혹은 마지막폴더랑 파일이름)
+      깃허브에 들어갈거 생각!!*/
+      @font-face
+      {
+        font-family: 'jaemok';
+        src: url('jaemok.ttf') format('truetype');
+
+      }
+
+      @font-face
+      {
+        font-family: 'naeyong';
+        src: url('naeyong.ttf') format('truetype');
+      }
+
+      @font-face
+      {
+        font-family: 'naeyong2';
+        src: url('naeyong2.ttf') format('truetype');
+      }
+
+
+
     </style>
   </head>
 
+
+
+
   <body>
-    <h1><a href="what.html"> Arsenal Family</a></h1>
-    <ol>
-      <li><a href="what.html"> what's this</a></li>
-      <li><a href="diary.html"> gunner's diary</a></li>
-      <li><a href="vlog.html"> gunner's v-log</a></li>
-      <li><a href="penpic.html"> gunner's penpic</a></li>
-      <li><a href="song.html"> Arsenal Song</a></li>
-    </ol>
-    <h2>응원 </h2>
+    <h1> <img src="arsenal6.png" border="0" width="120" height="90">
+    </h1>
+    <h2><a href="what.html"> Gunner Fam</a></h2>
+    <!--
+    div 부모태그(grid) 안에
+    ul 이랑 div(h3+ol)2개의 자식
 
-    <p>
-      <iframe width="756" height="425" src="https://www.youtube.com/embed/OpKazZDwhpY"
-      title="YouTube video player" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
-    </p>
+    -->
+    <div id="grid">
+      <ul >
 
-      <a href="https://www.youtube.com/watch?v=OpKazZDwhpY"
-      target="_blank"> Arsenal Song <br><br> </a>
-      all arranged by bidoolgy,seine<br>
-    <p>
+          <div id="what">
+            <li><a href="what.html" class="what2"> what's this?</a></li><br><br>
+          </div>
+          <li><a href="diary.html"> gunner's diary</a></li><br><br>
+          <li><a href="vlog.html"> gunner's v-log</a></li><br><br>
+          <li><a href="penpic.html"> gunner's penpic</a></li><br><br>
+          <li><a href="song.html"> Arsenal Song</a></li>
+      </ul>
 
-      <div id="disqus_thread"></div>
-      <script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://arsenal-10.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+     <div id="contents">
+      <h3> Arsenal Song </h3>
+        <ol>
+          <br><br><br>
+          <li> 응원 응그래 골느면 빙그레 방에서 방긋</li>
+          <p>
+            <iframe width="756" height="425" src="https://www.youtube.com/embed/OpKazZDwhpY"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+          </p>
 
-    </p>
+            <a href="https://www.youtube.com/watch?v=OpKazZDwhpY"
+            target="_blank"> Arsenal Song <br><br> </a>
+            all arranged by bidoolgy,seine<br>
+          <p>
+
+            <div id="disqus_thread"></div>
+            <script>
+          /**
+          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+          /*
+          var disqus_config = function () {
+          this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          */
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://arsenal-10.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          </p>
+
+        </ol>
+      </div>
+    </div>
 
   </body>
 
