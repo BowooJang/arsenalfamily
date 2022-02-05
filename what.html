@@ -5,10 +5,22 @@
 
 -->
 
-<html>
+
+
+<html lang="en">
   <head>
-    <title> what's this? </title>
+
+
+    <!-- 링크주소는 버전별로 변경해줘야함 버전은 홈피에 써있음 -->
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5b8502554b.js" crossorigin="anonymous"></script>
+
+    <title> what's this? </title>
+
+    <!-- defer 는 로딩없이 빠르게 js파일 가져오는 옵션-->
+    <script src="main.js " defer></script>
+
     <style>
 
 
@@ -59,6 +71,9 @@
         padding-left:1px;
         font-family: 'naeyong2';
         padding-left: 70px;
+        flex-direction:column;
+
+
       }
 
 
@@ -105,13 +120,82 @@
         font-size: 18px;
       }
 
+      /*이 부분부터는 픽셀 작아질때로 옮겨야할듯*/
+      .menu_button{
+        display:none; /*평소엔 안나오게하는 설정.
+        아래에 화면 작아지면 생기는 설정할것*/
+        position:absolute;
+        font-size:30px;
+        right:32px;
+
+      }
+
+      #grid ul.active{
+        display: flex;
+      }
+
+      #contents.active{
+        display:none;
+      }
+
+
 
       /*screen width < 800px 라는 뜻
-      -> 작을때 옵션이면 max!! */
+      -> 작을때 옵션이면 max!!
+      @@@여기아래코드는 @미디어 영향받음! */
       @media(max-width:800px){
         h1,h2,#grid ul{padding-left:0px;
         }
       }
+      /*500이하일때 폰용사이즈. 근데 다하고나서는
+      400으로 바꾸기-> 지금은 컴에서 확인해야해서.*/
+      @media(max-width:500px)
+      {
+
+        h1{
+          text-align:center;}
+        .menu_button{
+          display:inline; /*500이하일때만 메뉴버튼 등장*/
+        }
+        h2{
+          font-size: 70px;
+        }
+
+        ul{
+        display:none;
+        flex-direction:column;
+        margin-left: 20px;
+
+        }
+        h3{
+        margin-left: 0px;
+
+        }
+        #contents{
+          margin-top: 20px;
+          display: inline;
+          padding-left: 0px;
+          padding-right:0px;
+          margin-right:0px;
+          border-right: 0px;
+        }
+        .menu_button{
+          padding:0px;
+          display: inline;
+        }
+
+
+
+
+
+
+
+
+      }
+
+
+
+
 
 
 
@@ -156,6 +240,7 @@
 
     -->
     <div id="grid">
+
       <ul >
 
           <div id="what">
@@ -167,25 +252,49 @@
           <li><a href="song.html"> Arsenal Song</a></li>
       </ul>
 
+
+
      <div id="contents">
-      <h3>what to do?</h3>
+      <h3>what can do?</h3>
         <ol>
           <br><br><br>
 
-          <img src="arsenal5.jpeg" border="0" width="300" height="300">
-          <img src="arsenal7.png" border="0" width="300" height="300">
-          <img src="arsenal8.jpeg" border="0" width="300" height="300">
-          <br><br><br><br><br><br>
-          <img src="chi.jpeg" border="0" width="500" height="450">
-          <br><br><br>
+          <p>We are Gunner family living in Korea.<br><br>
+            We are new gunners, but we cry and <br><br>
+            laugh with Arsenal every day.<br><br>
+            This homepage is our home, which we built online, <br><br>
+            decorated with contents that show our love for Arsenal.<br><br>
+             The whole process of creating all these contents, <br><br>
+             such as cheering songs, fanfictures, <br><br>
+             vlogs, and diaries, was fun.<br><br>
+            The more we support Arsenal, who <br><br>
+            plays beautiful football, the happier our family gets.<br><br>
+            Like our family's love, <br><br>
+            our love for Arsenal will last forever.<br><br>
+            COYG!!</p>
 
-          <li>We are keeping that peace of arsenal</li>
-          <li> winning day and losing day both today is arse nal.</li>
-          <li> 3 people x 3 human eating = 9nner </li>
-          <li> two bedoolgi is vegun, one gorani is begun   </li>
+          <p>
+            우리는 한국에 사는 구너가족입니다.<br>
+            우리는 새내기 구너들이지만<br>
+            매일 아스날과 함께 울고 웃고 있죠.<br>
+            이 홈페이지는 아스날에 대한 우리의 애정을 담은 <br>
+            콘텐츠들로 꾸민, 온라인에 세운 우리들의 집이에요.<br>
+            응원가, 팬픽, 브이로그, 다이어리 등<br>
+            이 모든 컨텐츠들을 만드는 모든 과정이<br>
+            정말정말 즐거웠어요.<br>
+            아름다운 축구를 하는 아스날을 응원할수록<br>
+            우리 가족은 더욱 행복해집니다.<br>
+            우리 가족의 사랑처럼<br>
+            아스날을 향한 우리의 사랑도 영원할 거라구요!</p><br>
         </ol>
       </div>
+        <a href="#" class="menu_button">
+          <i class="fas fa-bars"></i>
+        </a>
+
+
     </div>
+
   </body>
 
 </html>
