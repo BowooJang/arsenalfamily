@@ -1,198 +1,89 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>GUNNER FAM</title>
+    <script src="https://kit.fontawesome.com/5b8502554b.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+</head>
 
-
-<!--
-인댁스 안씀. 아스날패밀리누르면 바로 왓으로 가게끔.
-근데 여기가 메인이니까
-근데 이페이지는안씀. 인덱스는 왓을 따라가니까,
-왓을 바꿔야함!!
-
-걍 what 에있는거 붙여넣음.
-
-
--->
-
-<html>
-  <head>
-    <title> Gunner Fam </title>
-    <meta charset="utf-8">
-    <style>
-
-
-    /*왼쪽 메뉴들 전체 옵션 */
-      h1,h2,ul{
-        padding-left: 20px;
-      }
-
-
-      /* 링크태그는 다 a태그임!!
-      링크거는 메뉴나 제목들 전체에 적용하는게 a!!
-      h단독으로는 링킁태그가 아니다. */
-      a{
-        text-decoration: none;
-        color: inherit;
-        font:30px;
-      }
-      /* 링크태그들(a) 클릭했을때 나오는 보라색 옵션 사라지는것
-      색도 안나오게하는것
-      */
-
-
-      /* 맨 위에 로고        */
-      h1{
-        margin:0;
-        padding-left: 60px;
-      }
-
-      /* 아스날패밀리(제목)         */
-      h2{
-        margin: 0;
-        margin-bottom: 10px;
-        padding:1px;
-        font-family: 'jaemok';
-        font-size: 100px;
-        font-weight:normal;
-        padding-left: 70px;
-
-      }
-
-
-      /* 메뉴 파트
-      폰트둥,+그리드로 묶어주기,.
-      나중에 컨텐츠 더 생기면 ul이 다른곳에
-      또 생길수도 있으므로 정리해두기         */
-      #grid ul{
-        list-style: none;
-        padding-left:1px;
-        font-family: 'naeyong2';
-        padding-left: 70px;
-      }
-
-
-      /*메뉴에 왓디스만 빨강나오는 효과*/
-      #grid #what{
-        color:rgb(250,0,0);
-      }
-
-
-      /* 왓투두         */
-      h3{
-          font-weight:100;
-          font-size:30px;
-          padding-left: 28px;
-          font-family: 'naeyong2';
-          margin-top:10px;
-          margin-bottom: 0px;
-      }
-
-
-        /* 본문 내용         */
-      #grid ol
-        {
-        font-family: 'naeyong2';
-        margin-top: 5px;
-       }
-
-       /* 제목,본문 내용 같이 설정 */
-
-       #contents
-       {
-         padding:20px;
-         padding-left:50px;
-         padding-top: 1px;
-       }
-
-
-
-       /* 그리드(공간 디자인) 만들기*/
-      #grid
-      {
-        display: grid;
-        grid-template-columns: 220px 700px;
-        font-size: 18px;
-      }
-
-
-      /*screen width < 800px 라는 뜻
-      -> 작을때 옵션이면 max!! */
-      @media(max-width:800px){
-        h1,h2,#grid ul{padding-left:0px;
-        }
-      }
-
-
-
-      /*외부 폰트 적용하기
-      폰트주소 그냥 넣어줘야함.파일이름만.
-      (혹은 마지막폴더랑 파일이름)
-      깃허브에 들어갈거 생각!!*/
-      @font-face
-      {
-        font-family: 'jaemok';
-        src: url('jaemok.ttf') format('truetype');
-
-      }
-
-      @font-face
-      {
-        font-family: 'naeyong';
-        src: url('naeyong.ttf') format('truetype');
-      }
-
-      @font-face
-      {
-        font-family: 'naeyong2';
-        src: url('naeyong2.ttf') format('truetype');
-      }
-
-
-
-    </style>
-  </head>
-
-
-
-
-  <body>
-    <h1> <img src="logored.gif" border="0" width="120" height="90">
-    </h1>
-    <h2><a href="what.html"> Gunner Fam</a></h2>
-    <!--
-    div 부모태그(grid) 안에
-    ul 이랑 div(h3+ol)2개의 자식
-
-    -->
-    <div id="grid">
-      <ul >
-
-          <div id="what">
-            <li><a href="what.html" class="what2"> what's this?</a></li><br><br>
-          </div>
-          <li><a href="diary.html"> gunner's diary</a></li><br><br>
-          <li><a href="vlog.html"> gunner's v-log</a></li><br><br>
-          <li><a href="penpic.html"> gunner's penpic</a></li><br><br>
-          <li><a href="song.html"> Arsenal Song</a></li>
-      </ul>
-
-     <div id="contents">
-      <h3>what to do?</h3>
-        <ol>
-          <br><br><br>
-
-          <img src="arsenal5.jpeg" border="0" width="300" height="300">
-          <img src="arsenal7.png" border="0" width="300" height="300">
-          <img src="arsenal8.jpeg" border="0" width="300" height="300">
-          <br><br><br><br><br><br>
-          <img src="chi.jpeg" border="0" width="500" height="450">
-          <br><br><br>
-
-          <li>We are keeping that peace of arsenal</li>
-          <li> winning day and losing day both today is arse nal.</li>
-          <li> 3 people x 3 human eating = 9nner </li>
-          <li> two bedoolgi is vegun, one gorani is begun   </li>
-        </ol>
-      </div>
+<body>
+<div class="total">
+    <div class="main">
+        <h1><img src="img/logored.gif"></img></h1>
+        <h2><a href="index.html">GUNNER FAM </a></h2>
     </div>
-  </body>
 
+
+    <div id="menucon">
+
+        <ul class="menu">
+            <br>
+            <div id="what">
+                <li><a href="what.html">what's this?</a><br><br><br></li>
+            </div>
+            <li><a href="diary.html">gunner's diary</a><br><br></li><br>
+            <li><a href="vlog.html">gunner's v-log</a><br><br></li><br>
+            <li><a href="penpic.html">gunner's penpic</a><br><br></li><br>
+            <li><a href="song.html">Arsenal Song</a><br></li><br>
+        </ul>
+        <article class="content">
+            <h3> what to do? </h3>
+            <p class="yong">
+                We are Gunner family living in Korea.<br>
+                We are new gunners, <br>
+                but we cry and laugh with Arsenal every day.<br>
+                This homepage is our home, <br>
+                which we built online, decorated with contents <br>
+                that show our love for Arsenal.<br>
+                The whole process of creating all these contents, <br>
+                such as cheering songs, fanfictures, vlogs, <br>
+                and diaries, was fun.<br>
+                The more we support Arsenal, <br>
+                who plays beautiful football, <br>
+                the happier our family gets.<br>
+                Like our family's love, <br>
+                our love for Arsenal will last forever.<br>
+                COYG!! <br>
+
+                <br><br>
+                우리는 한국에 사는 구너가족입니다.<br>
+                우리는 새내기 구너들이지만 <br>
+                매일 아스날과 함께 울고 웃고 있죠. <br>
+                이 홈페이지는 아스날에 대한 <br>
+                우리의 애정을 담은 콘텐츠들로 꾸민, <br>
+                온라인에 세운 우리들의 집이에요.  <br>
+                응원가, 팬픽, 브이로그, 다이어리 등 <br>
+                이 모든 컨텐츠들을 만드는 모든 과정이 <br>
+                정말정말 즐거웠어요. <br>
+                아름다운 축구를 하는 아스날을 응원할수록 <br>
+                우리 가족은 더욱 행복해집니다. <br>
+                우리 가족의 사랑처럼 <br>
+                아스날을 향한 우리의 사랑도 영원할 거라구요!<br>
+
+
+            </p>
+        </article>
+    </div>
+    <a href="#" class="menu_button">
+        <i class="fas fa-bars"></i> 
+    </a>
+</div>
+
+
+
+</body>
 </html>
+
+
+
+
+
+
+
+
+
